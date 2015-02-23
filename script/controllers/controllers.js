@@ -121,7 +121,8 @@ angular.module('controllers', [])
   	//Robot will face the new direction accroding to this action but stay at the same position
   	$scope.rotate = function(direction){
   		if(!$scope.robot.isSet){
-  			alert('Please place your robot first');
+        $scope.showError = true;
+  			$scope.error = 'Please place your robot first';
   		}else{
   			dataService.rotateRobot(direction).then(function(res){
   				$scope.robot.position = res.data;
@@ -144,7 +145,8 @@ angular.module('controllers', [])
   	//Robot will move one step towards the current direction
   	$scope.move = function(){
   		if(!$scope.robot.isSet){
-  			alert('Please place your robot first');
+        $scope.showError = true;
+  			$scope.error = 'Please place your robot first';
   		}else{
 		  	dataService.moveRobot().then(function(res){
 		  		$scope.robot.position = res.data;
