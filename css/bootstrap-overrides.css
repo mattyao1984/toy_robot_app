@@ -1,0 +1,101 @@
+@font-face {
+  font-family: 'LeagueGothicRegular';
+  src: url('../../fonts/leaguegothic-regular-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.container{
+	padding: 0;
+}
+
+.btn-group .btn+.btn{
+	margin-left: 0;
+}
+
+.btn{
+	border-radius: 0;
+	font-size: 12px;
+	padding: 6px 0;
+	line-height: 15px;
+	height: 40px;
+	font-weight: bold;
+}
+
+.row{
+	position: relative;
+}
+
+.table-responsive{
+	border: none;
+}
+
+.glyphicon-remove{
+	margin-right: 10px;
+	margin-top: 2px;
+	cursor: pointer;
+}
+
+.glyphicon-refresh{
+	margin-left: 10px;
+	margin-top: 2px;
+	cursor: pointer;
+}
+
+.glyphicon-info-sign{
+	margin-right: 2px;
+	top: 2px;
+	cursor: pointer;
+	font-size: 18px !important;
+}
+
+.glyphicon-remove-circle{
+	position: absolute;
+	right: -15px;
+	top: -15px;
+	cursor: pointer;
+	color: #000;
+	font-size: 30px;
+	background: #fff;
+	border-radius: 50%;
+}
+
+.alert{
+	margin: 0 auto;
+	font-size: 13px;
+	text-align: center;
+	border-radius: 0;
+	height: 30px;
+	padding: 0;
+	line-height: 30px;
+}
+
+.btn-group>.btn.active{
+	z-index: inherit;
+}
+
+.tooltip{
+  left: 0;
+  width: 295px !important;
+  display: block !important;
+}
+
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 10%;
+  margin-left: -5px;
+  border-bottom-color: #000000;
+  border-width: 0 5px 5px;
+}
+
+@media (min-width: 990px){
+	.container{
+		width: 940px;
+	}
+}
+
+@media (max-width: 989px){
+	.container{
+		width: 750px;
+	}
+}

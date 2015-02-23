@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="toyRobotApp">
+    <head>
+        <meta charset="utf-8">
+        <meta name=apple-mobile-web-app-capable content=yes>
+        <meta name=apple-mobile-web-app-status-bar-style content=black>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta id="viewport" name="viewport" content ="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>Toy Robot App</title>
+        <meta name="description" content="Toy Robot Web App built with HTML5 and AngularJS.">
+        <!-- CSS files -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- JS libaries files -->
+        <script src="script/lib/jquery-1.10.2.min.js"></script>
+        <script src="script/lib/jquery-migrate-1.2.1.min.js"></script>
+        <script src="script/lib/angular.js"></script>
+        <script src="script/lib/angular-touch.js"></script>
+        <script src="script/lib/angular-animate.min.js"></script>
+        <script src="script/lib/angular-route.min.js"></script>
+        <script src="script/lib/angular-sanitize.min.js"></script>
+        <script src="script/lib/underscore.js"></script>
+        <script src="script/lib/bootstrap.js"></script>
+        <script src="script/lib/moment.js"></script>
+        
+        <!-- JS scripts -->
+        <script src="script/services/dataServices.js"></script>
+        <script src="script/controllers/controllers.js"></script>
+        <script src="script/app.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+          <div class="header">
+            Howdy, Welcome to Toy Robot App!
+          </div>
+
+          <div ng-view=""></div>
+
+          <div class="footer">
+            &copy; Copyright Matt Yao @ 2015 All rights reserved.
+          </div>
+        </div>
+    </body>
+
+    <script src="//localhost:35729/livereload.js"></script>
+</html>

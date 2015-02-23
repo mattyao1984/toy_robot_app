@@ -1,0 +1,74 @@
+<div class="content">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h2>Enter your robot name:</h2>
+      <input type="text" ng-model="robot.name" placeholder="Enter your robot name..." ng-disabled="isCreated">
+      <p class="error pull-left" ng-show="nameExisted">Error: This name exists, please try another name.</p>
+      <button class="btn btn-primary pull-right" ng-click="create()" ng-show="!isCreated">CREATE ROBOT</button>
+    </div>
+  </div>
+
+  <div class="row robot-panel" ng-show="isCreated">
+  	<div class="col-md-5 col-md-offset-1">
+  		<div class="robot-welcome stepFade">
+  			<img src="../images/robot.png">
+  			<h3 ng-show="!robot.position.isSet">Hello master, I am {{ robot.name }}!</h3>
+  			<h3 ng-show="robot.position.isSet">Position: ({{ robot.position.x_pos }}, {{ robot.position.y_pos }}), Face: {{ robot.position.angle }}</h3>
+  		</div>
+  	</div>
+
+  	<div class="col-md-5">
+  		<div class="control-panel">
+  			<form class="form-inline">
+  				<h4>Please place your robot first:</h4>
+				  <div class="form-group">
+				  	<input type="text" class="short-textfield" ng-model="newPosition.x_pos" placeholder="x:">
+				  </div>
+				  <div class="form-group">
+				    <input type="text" class="short-textfield" ng-model="newPosition.y_pos" placeholder="y:">
+				  </div>
+				  <div class="form-group">
+				    <select ng-model="newPosition.angle">
+		  				<option ng-repeat="angle in angles" value="{{ angle }}">{{ angle }}</option>
+		  			</select>
+				  </div>
+				  <div class="form-group">
+				    <button class="btn btn-primary" ng-click="place()">PLACE ROBOT</button>
+				  </div>
+				</form>
+
+				<form class="form-inline">
+  				<h4>Rotate your robot:</h4>
+				  <div class="form-group">
+				    <button class="btn btn-primary" ng-click="rotate('left')">TURN LEFT</button>
+				  </div>
+				  <div class="form-group">
+				    <button class="btn btn-primary" ng-click="rotate('right')">TURN RIGHT</button>
+				  </div>
+				</form>	
+
+				<form class="form-inline">
+  				<h4>Move your robot:</h4>
+				  <div class="form-group">
+				    <button class="btn btn-primary" ng-click="move()">MOVE FORWARD</button>
+				  </div>
+				</form>
+
+        <p class="error" ng-show="showError">Error: {{ error }}</p>		
+  		</div>
+  	</div>
+  </div>
+
+  <div class="row">
+  	<div class="col-md-10 col-md-offset-1">
+  		<div class="output-box" ng-show="isCreated">
+  			<h4>Report Log</h4>
+  			<div class="reports">
+	  			<ul>
+	  				<li ng-repeat="log in logs" ng-class="'{{ log._class }}'">{{ log.time }}: &nbsp; &nbsp; &nbsp;{{ log.events }}</li>
+	  			</ul>
+	  		</div>
+  		</div>
+  	</div>
+  </div>
+</div>

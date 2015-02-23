@@ -1,0 +1,91 @@
+html, body
+	background: $bg-color
+	font-family: 'Open Sans', sans-serif
+
+	h1,h2,h3,h4,h5,h6
+		padding: 0
+		margin: 0
+
+	.error
+		color: #d80000
+
+	.header
+		height: 50px
+		background: #333
+		width: 100%
+		color: #ffffff
+		line-height: 50px
+		text-align: center
+
+	.container
+		width: 940px
+		margin: 0 auto
+
+		.content
+			background: #ffffff
+			padding: 20px
+
+			h2
+				font-size: 18px
+				line-height: 25px
+				letter-spacing: 1.25px
+				color: #333
+				margin-bottom: 10px
+
+			h4
+				font-size: 16px
+				line-height: 25px
+				letter-spacing: 1.5px
+				margin-bottom: 10px
+
+			button
+				margin-top: 10px
+
+			.robot-panel
+				margin: 30px 0
+				padding-bottom: 20px
+
+				.robot-welcome
+					text-align: center
+					margin: 20px auto
+
+			.output-box
+				
+				.reports
+					height: 300px
+					background: #000
+					overflow-y: scroll
+
+				h4
+					width: 100%
+					background: #ababab
+					color: #ffffff
+					line-height: 30px
+					text-align: center
+					height: 30px
+					text-transform: uppercase
+					margin: 0
+
+				ul
+					padding: 10px
+					margin: 0
+
+					li
+						list-style: none
+						display: block
+						font-size: 13px
+						line-height: 20px
+						margin: 5px 0
+
+						&.normal
+							color: #00ff00
+
+						&.error
+							color: #d80000
+
+	.footer
+		background: #fff
+		text-align: center
+		height: 40px
+		line-height: 40px
+		font-size: 13px
