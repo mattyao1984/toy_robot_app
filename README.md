@@ -1,6 +1,6 @@
 # Toy Robot App
 
-## This App is initalized by Yeoman Angular Generator
+## This App is created with AngularJS + Sass + HTML5
 
 ### How can I install? ###
 
